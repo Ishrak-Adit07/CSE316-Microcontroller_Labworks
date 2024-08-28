@@ -1,0 +1,7 @@
+.loginPageBG{
+    background-image: url('../sceneImages/LaserBG1.jpg');
+    min-height: 200%;
+    opacity: .9;
+    padding: 20px;
+    width: 100%;
+}

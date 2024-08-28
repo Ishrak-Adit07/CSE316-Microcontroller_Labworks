@@ -1,0 +1,187 @@
+.launchHeader{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding: 5px; 
+    color: #db6c6c;
+  }
+
+  .cardImage{
+    width: 40%;
+  }
+
+  .cardDesign{
+    background: linear-gradient(#db6c6c, #9198e5);
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    min-height: 450px;
+    width: 65%;
+    transform : translate(20%, -12%);
+  }
+  
+  .centerAlign{
+    display: block;
+    margin: 40px auto 0px;
+  }
+  
+  .whiteText{
+    background-color: transparent;
+    color: white;
+  }
+  
+  .card-title{
+    background-color: rgb(173, 216, 230, .3);
+    color: white;
+  }
+  
+  .card-question{
+    background-color: rgb(173, 216, 230, .5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .card-options{
+    background-color: rgb(173, 216, 230, .5);
+    color: white;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .card-img-top{
+    opacity: .7;
+    border-radius: 10px;
+  }
+  
+  .optionbtn{
+    width: 95%;
+    background-color: #BCD8C1;
+    opacity: .8;
+    color: black;
+    padding-left: 10px;
+    margin: 5px auto 5px;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .optionbtn:hover{
+    width: 95%;
+    background-color: #3e4740;
+    opacity: .6;
+    color: white;
+    padding-left: 10px;
+    margin: 5px auto 5px;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .card-button{
+    width: 90px;
+    background-color: #F45B69;
+    color: #EBEBEB;
+    border-radius: 10px;
+    margin: 20px 10px 10px 20px;
+  }
+  
+  .card-button:hover{
+    width: 100px;
+    background-color: #F45B69;
+    color: #EBEBEB;
+    border-radius: 10px;
+    margin: 20px 10px 10px 20px;
+  }
+  
+  .leftAlign{
+    text-align: left;
+  }
+  
+  .rightAlign{
+    text-align: right;
+  }
+
+.bigMargin{
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+
+
+
+.registerLabel{
+  margin-top: 3%;
+  margin-bottom: 10%;
+  margin-right: 5%;
+  font-weight: semi-bold;
+}
+
+.registerInput{
+    margin-top: 3%;
+    margin-bottom: 10%;
+    background-color: #EDE6E3;
+}
+
+.imageDesign{
+  margin-top: 1%;
+}
+
+.titleIcon{
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: 200%;
+  color: white;
+}
+
+.titleName{
+  color: white;
+  right: 80%;
+  transform : translate(0%, -45%);
+}
+
+.loginFields{
+    padding-top: 5%;
+    width: 35%;
+    transform : translate(100%, 0%);
+}
+
+.registerButton{
+  width: 25%;
+  border-radius: 10%;
+  font-weight: bold;
+  margin: 2%;
+  padding: 1%;
+}
+
+.cardSideImage{
+  width: 35%;
+  transform : translate(-100%, 0%);
+}
+
+.loginButtonField{
+  padding-top: 5%;
+  width: 50%;
+  transform : translate(5%, -40%);
+}
+
+.loginImage{
+  height: 30px;
+  margin-top: 3%;
+  margin-bottom: 10%;
+  margin-right: 5%;
+}
+
+.inline{
+  display: flex;
+  width: 100%;
+}
+
+.leftRegister{
+  padding-top: 5%;
+  width: 100%;
+  transform : translate(0%, 0%);
+}
+
+.rightRegister{
+  padding-top: 5%;
+  width: 100%;
+  transform : translate(0%, 0%);
+}
