@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@400;500;700&display=swap");
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Custom checkbox styles */
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+.custom-checkbox input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.custom-checkbox span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.custom-checkbox input:checked + span {
+  background-color: #2196f3;
+}
+
+.custom-checkbox span:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked + span:after {
+  display: block;
+}
+
+.custom-checkbox span:after {
+  left: 7px;
+  top: 4px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.date-selector {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.wheel-container {
+  width: 80px;
+  height: 120px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  text-align: center;
+}
+
+.wheel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.wheel::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.wheel-item {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  color: #333;
+}
+
+.wheel-item.selected {
+  font-weight: bold;
+  color: #2196f3;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-link {
+    @apply w-10 h-5 px-2 rounded-md hover:bg-slate-300 grid place-items-center;
+  }
+
+  .card {
+    align-items: center;
+    @apply bg-white px-6 py-10 rounded-lg shadow-lg;
+  }
+
+  .straightCard {
+    @apply bg-white px-6 py-10 rounded-lg shadow-lg;
+  }
+
+  .title {
+    @apply font-bold mb-8 text-2xl;
+  }
+
+  .input {
+    @apply w-full rounded-md p-2 placeholder:text-sm border-0 mb-4 outline-0 ring-1 ring-indigo-500 focus:ring-2;
+  }
+
+  .xinput {
+    @apply w-full rounded-md p-2 placeholder:text-sm border-0 mx-4 outline-0 ring-1 ring-indigo-500 focus:ring-2;
+  }
+
+  .btn {
+    @apply block w-full bg-indigo-500 text-white rounded-md p-2 active:bg-indigo-600;
+  }
+
+  .smbtn {
+    @apply block bg-indigo-500 text-white rounded-md p-2 active:bg-indigo-600;
+  }
+
+  .chbtn {
+    @apply bg-gradient-to-r from-blue-400 to-purple-400 w-1/5 py-1 rounded-lg text-gray-900 tracking-wide mt-2 ml-1 mb-2 hover:bg-blue-400;
+  }
+
+  .leftBarBtn {
+    @apply bg-transparent text-lg hover:bg-blue-200 hover:text-slate-700 w-full tracking-wide text-left p-2 py-4 rounded-lg;
+  }
+}
