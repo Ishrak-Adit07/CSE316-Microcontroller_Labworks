@@ -6,6 +6,7 @@ import Layout from "./pages/Layout";
 
 import Register from "./pages/user/Register";
 import Livescore from "./pages/user/Livescore";
+import Finalscore from "./pages/user/Finalscore";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
 
           <Route path="register" element={<Register />} />
           <Route path="livescore" element={<Livescore />} />
+          <Route path="finalscore" element={<Finalscore />} />
         </Route>
       </Routes>
     </BrowserRouter>

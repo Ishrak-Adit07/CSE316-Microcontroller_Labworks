@@ -19,13 +19,13 @@ const Livescore = () => {
     <div className="w-full flex flex-col items-center justify-center py-10 lg:py-40">
       <h1 className="text-center text-4xl text-slate-700 lg:mb-20">Live Score</h1>
       <div className="w-full flex flex-wrap items-center justify-center ">
-        <div className="w-full lg:w-1/2 justify-center">
+        <div className="w-full lg:w-1/2 text-center">
           <RedLiveScore
             name={players.redPlayer1Name}
             score={players.redPlayer1Score}
           />
         </div>
-        <div className="w-full lg:w-1/2 justify-center">
+        <div className="w-full lg:w-1/2 text-center">
           <GreenLiveScore
             name={players.greenPlayer1Name}
             score={players.greenPlayer1Score}
