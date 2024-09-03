@@ -1,8 +1,8 @@
 // Collecting user's username and pin for transaction services
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Alert from "../../messages/Alert";
 import { useNavigate } from "react-router-dom";
+import Alert from "../messages/Alert";
 
 const RegisterForm = () => {
 
