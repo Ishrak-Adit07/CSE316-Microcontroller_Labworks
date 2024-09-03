@@ -1,12 +1,15 @@
 // Collecting user's username and pin for transaction services
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Alert from "../messages/Alert";
+import { PlayersContext } from "../../contexts/PlayersContext";
 
 const RegisterForm = () => {
 
   const navigate = useNavigate();
+
+  const { players, setPlayers } = useContext(PlayersContext);
 
   const [greenName, setGreenName] = useState("");
   const [redName, setRedName] = useState("");
@@ -19,6 +22,8 @@ const RegisterForm = () => {
       const responseData = true;
 
       if (responseData) {
+
+        setPlayers({...players, redPlayer1Name: redName, greenPlayer1Name: greenName, redPlayer1Score:0, greenPlayer1Score:0});
         navigate("/livescore");
         setError(null);
       }

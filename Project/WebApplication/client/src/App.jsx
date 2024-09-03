@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 
 import Register from "./pages/user/Register";
+import Livescore from "./pages/user/Livescore";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route index element={<Register />} />
 
           <Route path="register" element={<Register />} />
+          <Route path="livescore" element={<Livescore />} />
         </Route>
       </Routes>
     </BrowserRouter>
