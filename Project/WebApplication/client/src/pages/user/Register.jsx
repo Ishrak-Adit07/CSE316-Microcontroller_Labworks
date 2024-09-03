@@ -4,10 +4,9 @@ import RegisterForm from "../../components/forms/RegisterForm";
 
 const Register = () => {
   return (
-    <section className="mt-20 pb-20">
-      <h1>Player Registration</h1>
+    <section className="h-screen mt-40">
       <RegisterForm />
-      <h1 className="text-indigo-500 text-bold text-center">
+      <h1 className="text-slate-500 text-center">
         Copyright@District12
       </h1>
     </section>

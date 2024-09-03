@@ -33,9 +33,10 @@ const RegisterForm = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="bg-gradient-to-r from-blue-400 to-purple-400 p-6 sm:p-8 rounded-lg shadow-lg max-w-md w-full"
+        // className="bg-gradient-to-r from-blue-400 to-purple-400 p-6 sm:p-8 rounded-lg shadow-lg max-w-md w-full"
+        className="bg-transparent p-6 sm:p-8 rounded-lg shadow-lg max-w-md w-full"
       >
-        <h1 className="text-3xl font-semibold text-red-400 text-slate-300 mb-6 text-center">
+        <h1 className="text-3xl font-semibold text-slate-700 mb-6 text-center">
           Register Players
         </h1>
         <form onSubmit={handleRegister}>
@@ -48,12 +49,12 @@ const RegisterForm = () => {
               onChange={(e) =>
                 setGreenName(e.target.value)
               }
-              className="w-full py-2 px-2 bg-transparent text-white border-b border-gray-700 focus:outline-none focus:border-red-400 peer autofill:bg-transparent"
+              className="w-full py-2 px-2 bg-transparent text-green-600 border-b border-green-400 focus:outline-none focus:border-green-400 peer autofill:bg-transparent"
               placeholder=""
             />
             {!greenName && (
               <label
-                className="absolute left-0 top-4 text-gray-300 transition-all transform peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:-translate-y-4 peer-focus:left-0 peer-focus:text-xs"
+                className="absolute left-0 top-4 text-green-600 transition-all transform peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:-translate-y-4 peer-focus:left-0 peer-focus:text-xs"
                 htmlFor="greenName"
               >
                 Green Player Name
@@ -70,12 +71,12 @@ const RegisterForm = () => {
               onChange={(e) =>
                 setRedName(e.target.value)
               }
-              className="w-full py-2 px-2 bg-transparent text-white border-b border-gray-700 focus:outline-none focus:border-red-400 peer autofill:bg-transparent"
+              className="w-full py-2 px-2 bg-transparent text-red-600 border-b border-red-400 focus:outline-none focus:border-red-400 peer autofill:bg-transparent"
               placeholder=""
             />
             {!redName && (
               <label
-                className="absolute left-0 top-4 text-gray-300 transition-all transform peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:-translate-y-4 peer-focus:left-0 peer-focus:text-xs"
+                className="absolute left-0 top-4 text-red-600 transition-all transform peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:-translate-y-4 peer-focus:left-0 peer-focus:text-xs"
                 htmlFor="redName"
               >
                 Red Player Name
