@@ -1,10 +1,11 @@
 const registerUser = async (redName1, greenName1) => {
-  if (!redName1 || greenName1) {
+  if (!redName1 || !greenName1) {
     throw Error("Names are required");
   }
 
   try {
-    const response = await fetch("login/names", {
+    console.log(redName1, greenName1);
+    const response = await fetch("http://localhost:4000/login/names", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

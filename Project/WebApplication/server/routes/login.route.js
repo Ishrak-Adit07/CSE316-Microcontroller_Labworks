@@ -47,7 +47,9 @@ router.post("/names", async(req, res)=>{
     redPlayer1.playerName = redName1;
     greenPlayer1.playerName = greenName1;
 
-    res.status(200).send({redPlayer1, greenPlayer1});
+    console.log(redName1, greenName1);
+
+    res.status(200).send({success:true, redPlayer1, greenPlayer1});
 });
 
 router.post("/id", async(req, res)=>{
@@ -146,7 +148,7 @@ router.get("/finalScore", async(req, res)=>{
 
     res.status(200).send(finalScoreObject);
 
-});
+}); 
 
 router.get("/:id/:password", async(req, res)=>{
 
