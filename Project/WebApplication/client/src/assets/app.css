@@ -21,96 +21,19 @@ body,
   scrollbar-width: none; /* Firefox */
 }
 
-/* Custom checkbox styles */
-.custom-checkbox {
-  position: relative;
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin-right: 5px;
-}
-
-.custom-checkbox input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.custom-checkbox span {
+.fog-background {
   position: absolute;
   top: 0;
   left: 0;
-  height: 20px;
-  width: 20px;
-  background-color: #eee;
-  border-radius: 50%;
-}
-
-.custom-checkbox input:checked + span {
-  background-color: #2196f3;
-}
-
-.custom-checkbox span:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.custom-checkbox input:checked + span:after {
-  display: block;
-}
-
-.custom-checkbox span:after {
-  left: 7px;
-  top: 4px;
-  width: 6px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  transform: rotate(45deg);
-}
-
-.date-selector {
-  display: flex;
-  justify-content: space-around;
-  width: 300px;
-  margin: 0 auto;
-}
-
-.wheel-container {
-  width: 80px;
-  height: 120px;
-  overflow: hidden;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  position: relative;
-  text-align: center;
-}
-
-.wheel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
   height: 100%;
-  overflow-y: scroll;
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none; /* For Internet Explorer and Edge */
-}
-
-.wheel::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
-}
-
-.wheel-item {
-  height: 40px;
-  line-height: 40px;
-  font-size: 16px;
-  color: #333;
-}
-
-.wheel-item.selected {
-  font-weight: bold;
-  color: #2196f3;
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 0, 0.3) 0%,
+    rgba(0, 255, 0, 0) 70%
+  );
+  z-index: -1;
+  pointer-events: none; /* Allow clicks to pass through */
 }
 
 @tailwind base;
