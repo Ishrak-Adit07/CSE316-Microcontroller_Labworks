@@ -27,7 +27,7 @@ const registerUser = async (redName1, greenName1) => {
 
 const getLiveScore = async () => {
   try {
-    const response = await fetch("login/liveScore");
+    const response = await fetch("http://localhost:4000/login/liveScore");
 
     const responseData = await response.json();
     if (!responseData.success) {
@@ -43,7 +43,7 @@ const getLiveScore = async () => {
 
 const getFinalScore = async () => {
   try {
-    const response = await fetch("login/finalScore");
+    const response = await fetch("http://localhost:4000/login/finalScore");
 
     const responseData = await response.json();
     if (!responseData.success) {
