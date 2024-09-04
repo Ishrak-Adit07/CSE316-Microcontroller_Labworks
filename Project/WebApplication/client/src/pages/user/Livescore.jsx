@@ -7,21 +7,25 @@ import GreenLiveScore from "../../components/cards/GreenLiveScore";
 import { getLiveScore } from "../../controllers/user.controller";
 
 const Livescore = () => {
+  const { players, setPlayers } = useContext(PlayersContext);
+  const navigate = useNavigate();
+
   useEffect(() => {
-    setTimeout(async () => {
+    const intervalId = setInterval(async () => {
       const liveScoreData = await getLiveScore();
+
+      console.log(liveScoreData);
 
       setPlayers({
         ...players,
-        redPlayer1Score: liveScoreData.red1Score,
-        greenPlayer1Score: liveScoreData.green1Score,
+        redPlayer1Score: liveScoreData.liveScoreObject.red1Score,
+        greenPlayer1Score: liveScoreData.liveScoreObject.green1Score,
       });
-    }, 1000);
-  }, []);
+    }, 1000); // Fetch every 1 second
 
-  const navigate = useNavigate();
-
-  const { players, setPlayers } = useContext(PlayersContext);
+    // Cleanup the interval on component unmount
+    return () => clearInterval(intervalId);
+  }, [players, setPlayers]);
 
   const handleShowFinalScore = () => {
     navigate("/finalScore");

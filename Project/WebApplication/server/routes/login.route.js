@@ -121,7 +121,7 @@ router.get("/liveScore", async(req, res)=>{
         "green1Score" : greenPlayer1.score
     }
 
-    res.status(200).send(liveScoreObject);
+    res.status(200).send({success:true, liveScoreObject});
 
 });
 
