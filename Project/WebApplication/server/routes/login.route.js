@@ -37,6 +37,19 @@ router.post("/name", async(req, res)=>{
 
 });
 
+router.post("/names", async(req, res)=>{
+
+    const {redName1, greenName1} = req.body;
+
+    redPlayer1.score = 0;
+    greenPlayer1.score = 0;
+
+    redPlayer1.playerName = redName1;
+    greenPlayer1.playerName = greenName1;
+
+    res.status(200).send({redPlayer1, greenPlayer1});
+});
+
 router.post("/id", async(req, res)=>{
 
     const {team, number, id, password} = req.body;
@@ -117,8 +130,8 @@ router.get("/finalScore", async(req, res)=>{
     console.log(greenPlayer1.playerName + " score : " + greenPlayer1.score);
 
     let finalScoreObject = {
-        "redPlayer1Score" : redPlayer1.score,
-        "greenPlayer1Score" : greenPlayer1.score 
+        "red1FinalScore" : redPlayer1.score,
+        "green1FinalScore" : greenPlayer1.score 
     }
 
     redPlayer1.playerName = "";
@@ -131,8 +144,6 @@ router.get("/finalScore", async(req, res)=>{
     greenPlayer1.password = "";
     greenPlayer1.score = 0;
 
-    console.log("In final score");
-
     res.status(200).send(finalScoreObject);
 
 });
@@ -140,22 +151,7 @@ router.get("/finalScore", async(req, res)=>{
 router.get("/:id/:password", async(req, res)=>{
 
     const {id, password} = req.params;
-
-    const playerID = id;
-    const playerPass = password;
-
-    console.log(id, password);
     res.status(200).send("Login verified");
-});
-
-router.post("/", async(req, res)=>{
-
-    const {id, password} = req.body;
-
-    console.log(id, password);
-
-    res.status(200).send(responseObject);
-
 });
 
 export default router;
