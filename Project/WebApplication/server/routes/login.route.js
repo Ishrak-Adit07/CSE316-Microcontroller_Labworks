@@ -117,7 +117,6 @@ router.get("/liveScore", async(req, res)=>{
     console.log(greenPlayer1.playerName, greenPlayer1.playerID, greenPlayer1.score);
 
     const liveScoreObject = {
-        "Score" : "score",
         "red1Score" : redPlayer1.score,
         "green1Score" : greenPlayer1.score
     }
