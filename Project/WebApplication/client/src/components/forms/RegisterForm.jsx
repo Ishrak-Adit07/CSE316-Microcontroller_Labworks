@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Alert from "../messages/Alert";
 import { PlayersContext } from "../../contexts/PlayersContext";
+import { registerUser } from "../../controllers/user.controller";
 
 const RegisterForm = () => {
-
   const navigate = useNavigate();
 
   const { players, setPlayers } = useContext(PlayersContext);
@@ -18,12 +18,16 @@ const RegisterForm = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      //const responseData = await registerUser(name);
-      const responseData = true;
+      const responseData = await registerUser(redName, greenName);
 
       if (responseData) {
-
-        setPlayers({...players, redPlayer1Name: redName, greenPlayer1Name: greenName, redPlayer1Score:0, greenPlayer1Score:0});
+        setPlayers({
+          ...players,
+          redPlayer1Name: redName,
+          greenPlayer1Name: greenName,
+          redPlayer1Score: 0,
+          greenPlayer1Score: 0,
+        });
         navigate("/livescore");
         setError(null);
       }
@@ -51,9 +55,7 @@ const RegisterForm = () => {
               type="text"
               id="greenName"
               value={greenName}
-              onChange={(e) =>
-                setGreenName(e.target.value)
-              }
+              onChange={(e) => setGreenName(e.target.value)}
               className="w-full py-2 px-2 bg-transparent text-green-600 border-b border-green-400 focus:outline-none focus:border-green-400 peer autofill:bg-transparent"
               placeholder=""
             />
@@ -73,9 +75,7 @@ const RegisterForm = () => {
               type="text"
               id="redName"
               value={redName}
-              onChange={(e) =>
-                setRedName(e.target.value)
-              }
+              onChange={(e) => setRedName(e.target.value)}
               className="w-full py-2 px-2 bg-transparent text-red-600 border-b border-red-400 focus:outline-none focus:border-red-400 peer autofill:bg-transparent"
               placeholder=""
             />
@@ -98,7 +98,6 @@ const RegisterForm = () => {
             Register
           </motion.button>
         </form>
-
       </motion.div>
 
       {error && <Alert msg={error} />}
