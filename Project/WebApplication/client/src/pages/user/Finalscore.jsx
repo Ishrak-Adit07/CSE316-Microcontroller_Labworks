@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { PlayersContext } from "../../contexts/PlayersContext";
 import { useNavigate } from "react-router-dom";
 import FinalscoreCard from "../../components/cards/Finalscore";
 
 const Finalscore = () => {
-  const navigate = useNavigate();
-
   const { setPlayers } = useContext(PlayersContext);
+
+  const navigate = useNavigate();
 
   const handleBackToHome = () => {
     setPlayers({

@@ -21,7 +21,7 @@ const Livescore = () => {
         redPlayer1Score: liveScoreData.liveScoreObject.red1Score,
         greenPlayer1Score: liveScoreData.liveScoreObject.green1Score,
       });
-    }, 1000); // Fetch every 1 second
+    }, 1000);
 
     // Cleanup the interval on component unmount
     return () => clearInterval(intervalId);
