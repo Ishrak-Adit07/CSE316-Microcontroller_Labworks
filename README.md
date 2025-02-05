@@ -5,3 +5,4 @@ Sessional courseworks on assembly language, microcontroller and related hardware
 - [Shahad Shahriar Rahman](https://github.com/shahadshahriar12) 
 - [Golam Mostofa](https://github.com/raizen094) 
 - [Kazi Redwanul Islam](https://github.com/kaziredwanislam)
+- [Maisha Maksura](https://github.com/mbc20)
